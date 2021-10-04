@@ -20,7 +20,7 @@ xlabel('x')
 ylabel('y')
 title('Graph of Sine Function')
 hold on
-[xInt,yInt] = intersections3(x,y,x,zeros(size(y)));
+[xInt,yInt] = Intersections_TrigGraph(x,y,x,zeros(size(y)));
 plot(x,y,'k-');
 plot(xInt,yInt, 'm*','MarkerSize', 10);
 
