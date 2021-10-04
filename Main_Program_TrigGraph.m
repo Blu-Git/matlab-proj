@@ -41,6 +41,9 @@ P=(2*pi)/b2;
 EP=c+(cyc*P);
 x=[0:0.1:EP+0.1];
 p=[0:pi/2:EP];
+SPc=string(sym(d));
+EPc=string(sym(EP));
+a2=abs(a);
 
 %Specified Evaluation
 switch upper(trigFunc)
@@ -67,7 +70,4 @@ switch upper(trigFunc)
 end
 
 %General Output
-SPc=string(sym(d));
-EPc=string(sym(EP));
-a2=abs(a)
 fprintf('Starting Point: %s\nEnding Point: %s\nRange: [-%d,%d]\n\n',SPc,EPc,a2,a2);
