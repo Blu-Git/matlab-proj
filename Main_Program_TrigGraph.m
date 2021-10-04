@@ -41,7 +41,7 @@ P=(2*pi)/b2;
 EP=c+(cyc*P);
 x=[0:0.001:EP+0.001];
 p=[0:pi/2:EP];
-SPc=string(sym(d));
+SPc=string(sym(c));
 EPc=string(sym(EP));
 a2=abs(a);
 
