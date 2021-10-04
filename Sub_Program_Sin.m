@@ -13,7 +13,12 @@ TF = islocalmin(y);
 TF1 = islocalmax(y);
 
 %x-intercepts
-[xInt,yInt] = Intersections_TrigGraph(x,y,x,zeros(size(y)));
+if d==0
+    [xInt,yInt] = Intersections_TrigGraph(x,y,x,zeros(size(y)));
+elseif d~=0 & cyc==1
+    x1=EP/2;
+    xInt=x(find(y==d));
+end
 
 %Plotting
 plot(x,y,'k-');
@@ -28,6 +33,12 @@ grid on
 
 plot(x,y,x(TF),y(TF),'r*');
 plot(x,y,x(TF1),y(TF1),'r*');
-plot(xInt,yInt, 'm*','MarkerSize', 10);
+if d==0
+    plot(xInt,yInt, 'm*','MarkerSize', 10);
+elseif d~=0 & cyc==1
+    plot(x1,d,'m*','MarkerSize', 10);
+    plot(EP,d,'m*','MarkerSize', 10);
+    plot(x,y,xInt,d,'m*','MarkerSize', 10);
+end
 hold off
 end
