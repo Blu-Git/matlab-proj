@@ -29,4 +29,5 @@ grid on
 plot(x,y,x(TF),y(TF),'r*');
 plot(x,y,x(TF1),y(TF1),'r*');
 plot(xInt,yInt, 'm*','MarkerSize', 10);
+hold off
 end

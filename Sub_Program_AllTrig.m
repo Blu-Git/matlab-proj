@@ -1,4 +1,4 @@
-function y=G(a,b,c,d,cyc,P,EP,p,trigFunc)
+function y=G(a,b,c,d,cyc,P,EP,x,p,trigFunc)
 syms x
 nexttile
 y=a*sin(b*x+c)+d;
