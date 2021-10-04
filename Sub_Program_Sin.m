@@ -1,7 +1,7 @@
 function y=S(a,b,c,d,cyc,P,EP,x,p,trigFunc)
 y=a*sin(b*x+c)+d;
 %Code for higlighting x-intercepts
-[xInt,yInt] = intersections3(x,y,x,zeros(size(y)));
+[xInt,yInt] = Intersections_TrigGraph(x,y,x,zeros(size(y)));
 
 %Code for Finding Minima and Maxima
 TF = islocalmin(y);
