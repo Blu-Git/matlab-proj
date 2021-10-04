@@ -18,9 +18,9 @@ a=input('Amplitude: ');
 while isempty(a) || a<=0
     a=input('Amplitude: ');
 end
-b=input('Period (b): ');
+b=input('Constant of x (b): ');
 while isempty(b) || b<=0
-    b=input('Period(b): ');
+    b=input('Constant of x (b): ');
 end
 c=input('Phase Shift (c): ');
 while isempty(c)
