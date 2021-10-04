@@ -6,7 +6,7 @@ d=double(0);
 cyc=double(0);
 y=double(0);
 trigFunc=char(' ');
-checker=['A' 'a' 'B' 'b' 'C' 'c' 'E' 'e' 'D' 'F' 'f' 'G' 'g'];
+checker=['A' 'a' 'B' 'b' 'C' 'c' 'E' 'e' 'D' 'd' 'F' 'f' 'G' 'g'];
 
 %Prompt Inputs
 fprintf('\nWelcome User to the Trigonometric Function Grapher\n\nWhat trigonomectric function do you want to use?\nA. Sine\nB. Cosine\nC.Tangent\nD.Cosecant\nE.Secant\nF.Cotangent\nG.All of the above\n\n');
@@ -39,7 +39,7 @@ end
 b2=abs(b);
 P=(2*pi)/b2;
 EP=c+(cyc*P);
-x=[0:0.1:EP+0.1];
+x=[0:0.001:EP+0.001];
 p=[0:pi/2:EP];
 SPc=string(sym(d));
 EPc=string(sym(EP));
