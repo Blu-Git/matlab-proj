@@ -6,38 +6,38 @@ d=double(0);
 cyc=double(0);
 y=double(0);
 trigFunc=char(' ');
+checker=['A' 'a' 'B' 'b' 'C' 'c' 'D' 'F' 'f' 'G' 'g'];
 
 %Prompt Inputs
 fprintf('\nWelcome User to the Trigonometric Function Grapher\n\nWhat trigonomectric function do you want to use?\nA. Sine\nB. Cosine\nC.Tangent\nD.Cosecant\nE.Secant\nF.Cotangent\nG.All of the above\n\n');
 trigFunc=input('Enter Chosen Option: ','s');
-while isempty(trigFunc)
-    trigFunc=input('Enter Chosen Option: ','s');
+while isempty(trigFunc)==1 | trigFunc~=checker
+    trigFunc=input('Enter a valid option: ','s');
 end
-%Add loop for inputs with extra characters
-
 a=input('Amplitude: ');
-while isempty(a) || a<=0
-    a=input('Amplitude: ');
+while isempty(a) || a==0
+    a=input('Enter a Valid Number for Amplitude: ');
 end
 b=input('Constant of x (b): ');
-while isempty(b) || b<=0
-    b=input('Constant of x (b): ');
+while isempty(b) || b==0
+    b=input('Enter a Valid Number for Constant of x (b): ');
 end
 c=input('Phase Shift (c): ');
 while isempty(c)
-    c=input('Phase Shift (c): ');
+    c=input('Enter a Valid Number for Phase Shift (c): ');
 end
 d=input('Vertical Shift: ');
 while isempty(d)
-    d=input('Vertical Shift: ');
+    d=input('Enter a Valid Number for Vertical Shift: ');
 end
 cyc=input('How many cycles do you want to see? ');
 while isempty(cyc) || cyc<=0
-    cyc=input('How many cycles do you want to see? ');
+    cyc=input('Enter a Valid Number for the number of cycles you want to see: ');
 end
 
 %General Evaluation
-P=(2*pi)/b;
+b2=abs(b);
+P=(2*pi)/b2;
 EP=c+(cyc*P);
 x=[0:0.1:EP+0.1];
 p=[0:pi/2:EP];
@@ -63,10 +63,11 @@ switch upper(trigFunc)
         trigFunc='csc';
         Csc=Sub_Program_Csc(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'G'
-        %Sub Program to graph all trigonometric functions (sub-plotting).
+        AllTrig=Sub_Program_AllTrig(a,b,c,d,cyc,P,EP,x,p,trigFunc);
 end
 
 %General Output
 SPc=string(sym(d));
 EPc=string(sym(EP));
-fprintf('Starting Point: %s\nEnding Point: %s\n\n',SPc, EPc);
+a2=abs(a)
+fprintf('Starting Point: %s\nEnding Point: %s\nRange: [-%d,%d]\n\n',SPc,EPc,a2,a2);
