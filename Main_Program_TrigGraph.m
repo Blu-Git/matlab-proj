@@ -49,7 +49,7 @@ switch upper(trigFunc)
         Sin=Sub_Program_Sin(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'B'
         trigFunc='cos';
-        Cos=Sub_Program_Cos(a,b,c,d,x,p,trigFunc);
+        Cos=Sub_Program_Cos(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'C'
         trigFunc='tan';
         Tan=Sub_Program_Tan(a,b,c,d,cyc,P,EP,x,p,trigFunc);
