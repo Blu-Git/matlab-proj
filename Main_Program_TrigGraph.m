@@ -1,4 +1,3 @@
-%HOTDOG
 %Initialize Variables
 a=double(0);
 b=double(0);
@@ -15,6 +14,7 @@ while isempty(trigFunc)
     trigFunc=input('Enter Chosen Option: ','s');
 end
 %Add loop for inputs with extra characters
+
 a=input('Amplitude: ');
 while isempty(a) || a<=0
     a=input('Amplitude: ');
@@ -39,9 +39,8 @@ end
 %General Evaluation
 P=(2*pi)/b;
 EP=c+(cyc*P);
-x=[0:.01:EP];
+x=[0:0.1:EP+0.1];
 p=[0:pi/2:EP];
-
 
 %Specified Evaluation
 switch upper(trigFunc)
@@ -67,4 +66,7 @@ switch upper(trigFunc)
         %Sub Program to graph all trigonometric functions (sub-plotting).
 end
 
-%Note: Add labels for maxima, minima, and x-intercepts for one cycle.
+%General Output
+SPc=string(sym(d));
+EPc=string(sym(EP));
+fprintf('Starting Point: %s\nEnding Point: %s\n\n',SPc, EPc);
