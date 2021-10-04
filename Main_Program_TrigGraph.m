@@ -57,14 +57,14 @@ switch upper(trigFunc)
         trigFunc='tan';
         Tan=Sub_Program_Tan(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'D'
-        trigFunc='cot';
-        Cot=Sub_Program_Cot(a,b,c,d,cyc,P,EP,x,p,trigFunc);
+        trigFunc='csc';
+        Cot=Sub_Program_Csc(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'E'
         trigFunc='sec';
         Sec=Sub_Program_Sec(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'F'
-        trigFunc='csc';
-        Csc=Sub_Program_Csc(a,b,c,d,cyc,P,EP,x,p,trigFunc);
+        trigFunc='cot';
+        Csc=Sub_Program_Cot(a,b,c,d,cyc,P,EP,x,p,trigFunc);
     case 'G'
         AllTrig=Sub_Program_AllTrig(a,b,c,d,cyc,P,EP,x,p,trigFunc);
 end
