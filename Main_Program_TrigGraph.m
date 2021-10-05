@@ -1,3 +1,6 @@
+clear
+clc
+
 %Initialize Variables
 a=double(0);
 b=double(0);
