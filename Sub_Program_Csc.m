@@ -9,13 +9,6 @@ else
     fprintf('\nEquation of Trigonometric Function: y=-%d*%s(%dx+%d)+%d\n\n', a, trigFunc, b, c, d);
 end
 
-%Minima and Maxima
-%TF = islocalmin(y);
-%TF1 = islocalmax(y);
-
-%x-intercepts
-%[xInt,yInt] = Intersections_TrigGraph(x,y,x,zeros(size(y)));
-
 %Plotting
 fplot(y,[0 EP],'k-');
 set(gca,'xtick',p)
@@ -27,8 +20,5 @@ title('Graph of Cosecant Function')
 hold on
 grid on
 
-%plot(x,y,x(TF),y(TF),'r*');
-%plot(x,y,x(TF1),y(TF1),'r*');
-%plot(xInt,yInt, 'm*','MarkerSize', 10);
 hold off
 end
