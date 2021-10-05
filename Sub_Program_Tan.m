@@ -1,7 +1,6 @@
 function y=C(a,b,c,d,cyc,P,EP,p,trigFunc)
+
 syms x
-%y=a*tan(b*x+c)+d;
-%fplot(y,[0 EP])
 
 if b>0
     y=a*tan(b*x+c)+d;
